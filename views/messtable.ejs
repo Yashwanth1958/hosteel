@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <div style="background-image: url(/public/back.jpeg)">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:aliceblue;
+        }
+        #headingg{
+            text-align: center;
+            color: #c71e1e;
+            
+        }
+
+        .marquee{
+            
+            color: #c71e1e;
+            font-size: 30px;
+        }
+        table,thead{
+            
+        border: 2px solid  blue;
+        border-radius: 10px;
+        margin:60x 30px 30px 320px;
+        justify-content: center;
+        
+
+        
+    
+    
+        }
+       .tlabel{
+          text-align: center;
+          background-color:aqua;
+          font-size: 20px;
+          text-align: left;
+           border: 2px solid #c71e1e;
+
+           
+        }
+
+        
+    </style>
+</head>
+<body>
+
+<div class="marquee">
+    <marquee   >  <h1>TELANGANA UNIVERSITY NEW BOYS HOSTEL MESS BILL </h1></marquee>
+</div>
+    <table  style="width: 75%; height: 75vh;" class="table" >
+        <% rows.forEach((row )=>{ %>
+
+    
+        <thead >
+            <tr ><td  id="headingg"><H1>DETAILS OF THE STUDENT </H1></td> <td><img src="/public/main gate.jpg"></td></tr>
+            
+              <tr  class="tlabel">  <td   colspan="2"  text-color="white"  > <b>Mess no </b>:  <td colspan="3"> <b><%= row.messno %> </b> </td>
+              <tr class="tlabel"><td colspan="2"  > <b>Name :</b></td><td colspan="3"> <b><%= row.name %></b></td></tr> 
+              <tr class="tlabel"><td colspan="2"><b> DateOfJoining :</b></td> <td colspan="3"><b><%= row.dateofjoining %></b></td></tr>  
+              <tr class="tlabel"><td colspan="2"><b>Dept :</b></td><td colspan="3"><b><%= row.dept%></b></td></tr>
+              <tr class="tlabel"><td colspan="2"><b>FatherName :</b></td> <td colspan="3"><b><%= row.fathername %></b></td></tr>
+              <tr class="tlabel"><td colspan="2"><b>PhoneNumber :</b></td> <td colspan="3"><b><%= row.phoneno %></b></td></tr>
+              <tr class="tlabel"><td colspan="2"><b>RoomNO :</b></td><td colspan="3"><b><%= row.roomno %></b></td></tr>
+              <tr class="tlabel"><td colspan="2 "><b>TotalBill :</b></td><td colspan="3"><b><%= row.totalbill%></b></td></tr>
+              <tr class="tlabel"><td colspan=" 2"><b>Depost :</b></td><td colspan="3"><b><%= row.deposit %></b></td></tr>
+                
+            
+        </thead>
+      
+        <% }); %>
+    </table>
+
+
+
+    h1>Enter Payment Amount</h1>
+    <form action="/createOrder" method="POST">
+        <label for="amount">Amount (INR): </label>
+        <input type="number" name="amount" id="amount" required>
+        <button type="submit">Pay Now</button>
+    </form>
+</body>
+</div>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/public/style.css">
+  <title>Data from PostgreSQL</title>
+</head>
+<body>
+  <h1>Data from PostgreSQL</h1>
+  <ul>
+    <% rows.forEach(row => { %>
+      <li><%= row.messno %></li>
+      <li><%=row.name %></li>
+      <!-- Replace "columnName" with the actual column name in your table -->
+    <% }); %>
+  </ul>
+
+  <table>
+    <% rows.forEach(row => { %>
+    <thead>
+      <tr>
+        <td>name</td>
+        <td>fathername</td>
+        <td>dateofjoining</td>
+        <td>dept</td>
+        <td>fathername</td>
+        <td>phoneno</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= row.name %></td>
+        <td><%= row.dateofjoining %> </td>
+        <td><%= row.dept %></td>
+        <td> <%= row.fathername%></td>
+        <td><%= row.phoneno %></td>
+       
+      </tr>
+      <tr>
+        <td colspan="6" align="center">
+          <font size="4" color="red">
+            <b>
+              Application Status as on Today
+            </b> 
+          </font>
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="tdlabel" colspan="2">messno</td>
+        <td colspan="3" class="tdlabel" width="600"><%= row.messno  %></td>
+        <td rowspan="4" colspan="1" class="tdlabel" style="text-align: right">
+           <img src="/public/Hostel-mess.jpg" style="width: 2.5cm; height: 3.5cm;"> 
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="tdlabel" colspan="2" style="border-radius: 0%;">Student Name</td>
+        <td colspan="3" class="tdlabel"><%=row.name %></td>
+
+      </tr>
+      
+      <tr>
+        <td class="tdlabel" colspan="2">Father/Guardian Name</td>
+        <td colspan="3" class="tdlabel"><%= row.fathername %></td>
+
+      </tr>
+      
+      <tr>
+        <td colspan="2" class="tdlabel">Application Status</td>
+        <td colspan="3" class="tdlabel" style="font-weight: bold; color: blue; border-radius:0%;" align="left">Pending at District officer for Sanction<br> UID(RASF) Verification done.<br>Hard Copy Not Yet Received By District Officer.<br>
+          </td>
+      </tr>
+      
+      <tr>
+        <td colspan="2" class="tdlabel">Your District Officer</td>
+        <td colspan="3" class="tdlabel">
+           DBCDO Office, NIZAMABAD</td>
+      </tr>
+      
+      <tr>
+        <td class="tdlabel">Fresh/Renewal</td>
+        <td colspan="2" class="tdlabel">RENEWAL</td>
+        <td class="tdlabel">Caste &amp; Sub-Caste</td>
+        <td colspan="2" class="tdlabel">EBC(OTHERS) &amp; Others</td>
+      </tr>
+      
+      <tr>
+        <td class="tdlabel">Application Date</td>
+        <td colspan="2" class="tdlabel">11-12-2023</td>
+        <td class="tdlabel">Scholarship Type</td>
+        <td nowrap="nowrap" colspan="2" class="tdlabel">College Attached Hostel(CAH)</td>
+      </tr>
+
+      <tr>
+        <td class="tdlabel">Field Officer Remarks</td>
+        <td colspan="2" class="tdlabel">  </td>
+        <td class="tdlabel">District Officer Remarks</td>
+        <td colspan="2" class="tdlabel"> </td>
+      </tr>
+      
+      <tr>
+        <td nowrap="nowrap" class="tdlabel">SSC/Equivalent HT No</td>
+        <td colspan="2" class="tdlabel">1707104406</td>
+        <td class="tdlabel">Year of Pass</td>
+        <td colspan="2" class="tdlabel">2017</td>
+      </tr>
+      
+      <tr>
+        <td nowrap="nowrap" class="tdlabel">SSC Pass Type</td>
+        <td colspan="2" class="tdlabel">AP Regular</td>
+        <td class="tdlabel">Date of Birth</td>
+        <td colspan="2" class="tdlabel">07-09-2001</td>
+      </tr>
+      
+      <tr>
+        <td class="tdlabel">College Name</td>
+        <td colspan="5" class="tdlabel">TELANGANA UNIVERSITY  DICHPALLY NIZAMABAD(20424)-DICHPALLY(M)</td>
+      </tr>
+      
+      <tr>
+        <td class="tdlabel">Academic Year</td>
+        <td colspan="2" class="tdlabel">2023-24</td>
+        <td class="tdlabel">Admission Number</td>
+        <td colspan="2" class="tdlabel">505522862032</td>
+      </tr>
+      
+      <tr>
+        <td class="tdlabel">Admission Date</td>
+        <td colspan="2" class="tdlabel">01-06-2023</td>
+        <td class="tdlabel">Course</td>
+        <td colspan="2" class="tdlabel">MCA</td>
+      </tr>
+      
+      <tr>
+        <td class="tdlabel">Course Year</td>
+        <td colspan="2" class="tdlabel">2/3</td>
+        <td class="tdlabel">Bank Name</td>
+        <td colspan="2" class="tdlabel"></td>
+      </tr>
+      
+      <tr>
+        <td class="tdlabel">Bank Account No</td>
+        <td colspan="2" class="tdlabel"> </td>
+        <td class="tdlabel" nowrap="nowrap">A/c Validity &amp; A/c Holder Name in Bank</td>
+        <td colspan="2" class="tdlabel"><b>Bank Details are no need for CAH and DAH Students &amp; - </b>
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="tdlabel" colspan="6" style="background-color: white;">
+          <b><font size="2" color="red">Sanctioned Details</font> </b>
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="tdlabel">Sanctioned From</td>
+        <td class="tdlabel"> </td>
+        <td class="tdlabel">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To</td>
+        <td class="tdlabel"> </td>
+        <td class="tdlabel">Sanctioned Months</td>
+        <td class="tdlabel">0</td>
+      </tr>
+      
+      <tr>
+        <td class="tdlabel">Mess Charges (Rs)</td>
+        <td colspan="2" class="tdlabel"></td>
+        <td class="tdlabel">Exam Fee (Rs)</td>
+        <td colspan="2" class="tdlabel">0</td>
+      </tr>
+      
+      <tr>
+        <td class="tdlabel">Tuition Fee (Rs)</td>
+        <td colspan="2" class="tdlabel">0</td>
+        <td class="tdlabel">Special Fee (Rs) <br> Other Fee (Rs)</td>
+        <td colspan="2" class="tdlabel">0<br>0</td>
+      </tr>
+      
+      <tr>
+        <td class="tdlabel">Sanctioned Date</td>
+        <td colspan="2" class="tdlabel"> </td>
+        <td nowrap="nowrap" class="tdlabel">Sanctioned Amount (Rs)</td>
+        <td colspan="2" class="tdlabel">0</td>
+      </tr>
+      
+      <tr>
+        <td colspan="6" align="left" class="tdlabel" style="background-color: white;">
+          <b>
+            <font size="2" color="red">Released Mess Charges, Exam Fee, and RTF Details</font> 
+          </b>
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="tdlabel">Released From</td>
+        <td class="tdlabel"> </td>
+        <td class="tdlabel">To</td>
+        <td class="tdlabel"> </td>
+        <td class="tdlabel">Released Months</td>
+        <td class="tdlabel">0</td>
+      </tr>
+      
+      <tr>
+        <td class="tdlabel">Mess Charges (Rs)</td>
+        <td class="tdlabel">0</td>
+        <td class="tdlabel">Exam Fee (Rs)</td>
+        <td class="tdlabel">0</td>
+        <td class="tdlabel">Total Amount (Rs)</td>
+        <td class="tdlabel">0</td>
+      </tr>
+      
+      <tr>
+        <td class="tdlabel">Tuition Fee (Rs)</td>
+        <td class="tdlabel">0</td>
+        <td class="tdlabel">Special Fee (Rs) <br> Other Fee(Rs)</td>
+        <td class="tdlabel">0<br></td>
+        <td nowrap="nowrap" class="tdlabel">Total Amount(RTF) (Rs)</td>
+        <td class="tdlabel">0</td>
+      </tr>
+
+      
+
+      <tr>
+        <td colspan="6" align="center"><br>
+          <table class="table table-striped table-bordered table-green">
+            <tbody><tr>
+              <th colspan="2">
+                <b>
+                  <font size="2">Verification Details</font> 
+                </b>
+              </th>
+            </tr>
+            
+            <tr>
+              <td colspan="2">
+                <font size="2" color="red">
+                  <b>
+                    Student's College Verification Details
+                  </b> 
+                </font>
+              </td>
+            </tr>
+            
+            <tr>
+              <td class="tdlabel" nowrap="nowrap" align="left" valign="top">
+                <table align="left">
+                  <tbody><tr>
+                    <td class="tdlabel">Scanned Documents Uploaded :</td>
+                    <td nowrap="nowrap" colspan="2" class="tdlabel">No</td>
+                  </tr>
+
+                  <tr>
+                    <td class="tdlabel" nowrap="nowrap">SSC Details Confirm
+                      :</td>
+                    <td class="tdlabel" nowrap="nowrap">Yes
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td class="tdlabel" nowrap="nowrap">Student Promoted :</td>
+                    <td class="tdlabel" nowrap="nowrap">Yes
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td class="tdlabel" nowrap="nowrap">Student
+                      DisContinued :</td>
+                    <td class="tdlabel" nowrap="nowrap">No
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td class="tdlabel" nowrap="nowrap">Whether put up 75%
+                      Attendance :</td>
+                    <td class="tdlabel" nowrap="nowrap">Yes
+                    </td>
+                  </tr>
+                </tbody></table>
+              </td>
+              <td class="tdlabel" nowrap="nowrap" align="left" valign="top">
+                <table align="left">
+                  <tbody><tr>
+                    <td class="tdlabel" nowrap="nowrap">Admission Category
+                      :</td>
+                    <td class="tdlabel" nowrap="nowrap">Convener
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td class="tdlabel" nowrap="nowrap">Caste Cert.
+                      Verified :</td>
+                    <td class="tdlabel" nowrap="nowrap">No
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td class="tdlabel" nowrap="nowrap">Income Cert.
+                      Enclosed :</td>
+                    <td class="tdlabel" nowrap="nowrap">Yes
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="tdlabel" nowrap="nowrap">Course &amp; Course
+                      Year Correct:</td>
+                    <td class="tdlabel" nowrap="nowrap">Yes
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td class="tdlabel" nowrap="nowrap">Correct Photograph
+                      :</td>
+                    <td class="tdlabel" nowrap="nowrap">Yes
+                    </td>
+                  </tr>
+                
+              </td>
+            </tr>
+             <% });%>
+          </tbody></table>
+        </td>
+      </tr>
+      
+
+      
+      
+
+      <tr>
+        <td class="tdlabel" colspan="6" style="background-color: white;">
+          
+        </td>
+      </tr>
+      
+      <tr>
+        <td colspan="6">
+          
+      </td></tr>
+    </tbody>
+    </tbody>
+  </table>
+</body>
+</html>

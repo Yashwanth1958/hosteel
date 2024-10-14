@@ -1,0 +1,13 @@
+.regist{
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+    border-radius: 0%;
+    justify-content: center;
+    margin: auto;
+    padding:relative;
+}
+
+.tdlabel{
+    border-radius:0%;
+}

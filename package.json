@@ -1,0 +1,21 @@
+{
+  "name": "hostel-website",
+  "version": "1.0.0",
+  "description": "hostel website",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "appidi yashwanth",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "bootstrap": "^5.3.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3",
+    "pg": "^8.11.3"
+  }
+}
